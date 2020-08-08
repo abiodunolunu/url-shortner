@@ -1,0 +1,30 @@
+{
+  "name": "url-shortner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "start:dev": "nodemon  --ignore public"
+  },
+  "author": "\"\"\u001b[DAbiodun Olunu",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "helmet": "^4.0.0",
+    "mongoose": "^5.9.27",
+    "morgan": "^1.10.0",
+    "shortid": "^2.2.15",
+    "valid-url": "^1.0.9"
+  },
+  "type": "module",
+  "devDependencies": {
+    "connect-livereload": "^0.6.1",
+    "eslint": "^7.6.0",
+    "livereload": "^0.9.1",
+    "nodemon": "^2.0.4"
+  }
+}

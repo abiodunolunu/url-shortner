@@ -1,0 +1,319 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  max-width: 1200px;
+}
+
+html {
+  background-color: deeppink;
+}
+
+body {
+  background: pink;
+  max-width: 1500px;
+  margin: auto;
+  border: 1px solid #302b4e;
+  -webkit-box-shadow: 1px 1px 8px #fff;
+          box-shadow: 1px 1px 8px #fff;
+}
+
+section.hero {
+  height: 100vh;
+  -webkit-transition: height 200ms ease-in;
+  transition: height 200ms ease-in;
+}
+
+section.hero .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.hero .hero__text {
+  color: #2c2748;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+section.hero .hero__text h1 {
+  font-weight: 900;
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+section.hero .hero__text p {
+  font-weight: 700;
+}
+
+section.hero .hero__image {
+  width: 100%;
+}
+
+section.hero .hero__image img {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  section.hero {
+    height: 70vh;
+  }
+  section.hero .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.hero .hero__image {
+    width: 50%;
+  }
+}
+
+section.main-lvl {
+  min-height: 25vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background-color: #302b4e;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+section.main-lvl form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  background-color: #fff;
+  background-color: transparent;
+}
+
+section.main-lvl form input {
+  height: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #e20846;
+  font-weight: 500;
+  font-size: 16px;
+  outline: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 450px;
+          flex: 1 1 450px;
+}
+
+section.main-lvl form input:focus, section.main-lvl form input:active {
+  border: 2px solid #e20846;
+}
+
+section.main-lvl form input[type="submit"] {
+  max-width: 25%;
+  background-color: #e20846;
+  outline: none;
+  border: 2px solid transparent;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 250ms linear;
+  transition: -webkit-transform 250ms linear;
+  transition: transform 250ms linear;
+  transition: transform 250ms linear, -webkit-transform 250ms linear;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+section.main-lvl form input[type="submit"]:hover, section.main-lvl form input[type="submit"]:active {
+  color: #2c2748;
+  border: 2px solid #e20846;
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+}
+
+@media (max-width: 690px) {
+  section.main-lvl form input[type="submit"] {
+    max-width: 100%;
+  }
+}
+
+section.main-lvl p.error {
+  margin-top: 12px;
+  background-color: lightpink;
+  color: red;
+  padding: 10px;
+  text-align: center;
+  display: none;
+}
+
+section.main-lvl p.error.show {
+  display: block;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+section.main-lvl ul.urls {
+  list-style: none;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+section.main-lvl ul.urls.has-sub {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+section.main-lvl ul.urls li {
+  border-radius: 4px;
+  width: 90%;
+  margin: auto;
+  background-color: #fff;
+  color: #fff;
+  padding: 10px;
+  word-wrap: break-word;
+  position: relative;
+}
+
+section.main-lvl ul.urls li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #ccc;
+}
+
+section.main-lvl ul.urls li:first-of-type::before {
+  height: 0;
+}
+
+section.main-lvl ul.urls li span {
+  display: inline-block;
+  width: 100%;
+  margin: 3px;
+}
+
+section.main-lvl ul.urls li span.long-url {
+  color: #333;
+  font-weight: 700;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+section.main-lvl ul.urls li span.short-url {
+  color: deeppink;
+}
+
+section.main-lvl ul.urls li span.copy {
+  text-align: center;
+  background-color: rgba(44, 39, 72, 0.3);
+  padding-top: 6px;
+  padding-bottom: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
+  color: #2c2748;
+}
+
+section.main-lvl ul.urls li span.copy:hover {
+  background-color: rgba(44, 39, 72, 0.7);
+  color: #2c2748;
+  -webkit-transform: scale(0.96);
+          transform: scale(0.96);
+}
+
+footer {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 8px;
+}
+
+footer p {
+  color: #302b4e;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer p a {
+  margin-left: 5px;
+}
+
+footer p i {
+  color: #e20846;
+  font-size: 25px;
+}
